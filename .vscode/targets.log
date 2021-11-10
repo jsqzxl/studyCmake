@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Nov 10 22:12:21 2021
+# Make data base, printed on Wed Nov 10 22:21:10 2021
 
 # Variables
 
@@ -161,7 +161,7 @@ SHLVL = 1
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-53a0a709-9908-4d97-8caa-ef01348795ac.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-ba2c0b03-a0b8-4e41-a473-43ee50d1b02a.sock
 # environment
 XDG_SESSION_ID = 2
 # environment
@@ -245,7 +245,7 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 19556
+VSCODE_PID = 22704
 # variable set hash-table stats:
 # Load=117/1024=11%, Rehash=0, Collisions=20/142=14%
 
@@ -314,6 +314,6 @@ hello: main.c
 # strcache performance: lookups = 20 / hit rate = 35%
 # hash-table stats:
 # Load=13/8192=0%, Rehash=0, Collisions=1/20=5%
-# Finished Make data base on Wed Nov 10 22:12:21 2021
+# Finished Make data base on Wed Nov 10 22:21:10 2021
 
  
