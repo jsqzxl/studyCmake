@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/jason/program/studyCmake'
+g++ -o hello main.c
+echo "OK"
+make: Leaving directory '/home/jason/program/studyCmake'
+ 
