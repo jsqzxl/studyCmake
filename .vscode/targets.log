@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make: *** No rule to make target 'all'.  Stop.
- 
 # GNU Make 4.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2014 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Nov 10 22:12:21 2021
+# Make data base, printed on Sun Nov 14 21:56:21 2021
 
 # Variables
 
@@ -48,6 +46,8 @@ VTE_VERSION = 5202
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
 _ = /usr/bin/code
+# makefile (from 'Makefile', line 31)
+objects := main.o
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -81,7 +81,7 @@ PATH = /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-SESSION_MANAGER = local/jason:@/tmp/.ICE-unix/2084,unix/jason:/tmp/.ICE-unix/2084
+SESSION_MANAGER = local/jason:@/tmp/.ICE-unix/2110,unix/jason:/tmp/.ICE-unix/2110
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
@@ -113,7 +113,7 @@ PWD = /home/jason/program/studyCmake
 # environment
 XDG_SEAT = seat0
 # environment
-SSH_AGENT_PID = 2171
+SSH_AGENT_PID = 2197
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -158,10 +158,12 @@ MAKECMDGOALS := all
 QT_IM_MODULE = fcitx
 # environment
 SHLVL = 1
+# makefile (from 'Makefile', line 7)
+CC := clang
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-53a0a709-9908-4d97-8caa-ef01348795ac.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-d0d58447-16e9-4d48-b430-7595971dd44a.sock
 # environment
 XDG_SESSION_ID = 2
 # environment
@@ -169,7 +171,7 @@ USER = jason
 # environment
 LC_MONETARY = zh_CN.UTF-8
 # makefile
-.DEFAULT_GOAL := hello
+.DEFAULT_GOAL := all
 # environment
 XDG_CURRENT_DESKTOP = Unity
 # automatic
@@ -214,6 +216,8 @@ LC_NUMERIC = zh_CN.UTF-8
 <F = $(notdir $<)
 # environment
 ELECTRON_RUN_AS_NODE = 1
+# makefile (from 'Makefile', line 8)
+CXX := g++
 # environment
 LC_MEASUREMENT = zh_CN.UTF-8
 # environment
@@ -221,11 +225,11 @@ LC_ALL = C
 # environment
 QT4_IM_MODULE = fcitx
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/0d18931c_10eb_46f7_8705_46de304cd23c
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/7d41b654_2cf7_462b_ac75_0c2c606dad1c
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.68
+GNOME_TERMINAL_SERVICE = :1.76
 # default
 SUFFIXES := 
 # environment
@@ -245,9 +249,9 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 19556
+VSCODE_PID = 7511
 # variable set hash-table stats:
-# Load=117/1024=11%, Rehash=0, Collisions=20/142=14%
+# Load=120/1024=12%, Rehash=0, Collisions=20/146=14%
 
 # Pattern-specific Variable Values
 
@@ -255,9 +259,9 @@ VSCODE_PID = 19556
 
 # Directories
 
-# . (device 66312, inode 11927570): 8 files, no impossibilities.
+# . (device 66312, inode 11927570): 9 files, no impossibilities.
 
-# 8 files, no impossibilities in 1 directories.
+# 9 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -265,15 +269,15 @@ VSCODE_PID = 19556
 
 # Files
 
-# Not a target:
-all:
+all: hello
+#  Phony target (prerequisite of .PHONY).
 #  Command line target.
-#  Implicit rule search has been done.
+#  Implicit rule search has not been done.
 #  File does not exist.
-#  File has not been updated.
+#  File has been updated.
+#  Successfully updated.
 
-# Not a target:
-main.c:
+.PHONY: all clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -282,17 +286,24 @@ main.c:
 Makefile:
 #  Implicit rule search has been done.
  
-#  Last modified 2021-11-10 21:37:16.303882897
+#  Last modified 2021-11-14 21:56:16.522950615
 #  File has been updated.
 #  Successfully updated.
 
-hello: main.c
+hello: main.o
 #  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 6):
-	$(CXX) -o hello main.c
-	echo "OK"
+#  Last modified 2021-11-14 21:20:43.75551033
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 46):
+	$(CXX) -o $@ $(objects)
+
+# Not a target:
+main.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2021-11-14 21:20:41.019543789
+#  File has been updated.
+#  Successfully updated.
 
 # Not a target:
 .DEFAULT:
@@ -300,20 +311,36 @@ hello: main.c
 #  Modification time never checked.
 #  File has not been updated.
 
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 60):
+	rm -f hello $(objects)
+
+main.o: main.cpp
+#  Implicit rule search has not been done.
+#  Last modified 2021-11-14 21:20:43.675511309
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 51):
+	$(CXX) -c main.cpp
+
 # files hash-table stats:
-# Load=6/1024=1%, Rehash=0, Collisions=0/17=0%
+# Load=9/1024=1%, Rehash=0, Collisions=0/29=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 13 / storage = 105 B / avg = 8 B
-# current buf: size = 8162 B / used = 105 B / count = 13 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 16 / storage = 127 B / avg = 7 B
+# current buf: size = 8162 B / used = 127 B / count = 16 / avg = 7 B
 
-# strcache performance: lookups = 20 / hit rate = 35%
+# strcache performance: lookups = 35 / hit rate = 54%
 # hash-table stats:
-# Load=13/8192=0%, Rehash=0, Collisions=1/20=5%
-# Finished Make data base on Wed Nov 10 22:12:21 2021
+# Load=16/8192=0%, Rehash=0, Collisions=1/35=3%
+# Finished Make data base on Sun Nov 14 21:56:21 2021
 
  

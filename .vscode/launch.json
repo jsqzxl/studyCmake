@@ -15,14 +15,17 @@
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            "preLaunchTask": "build",
+            "miDebuggerPath": "/usr/bin/gdb",
+            //"debugStdLib": true,
+            //"miDebuggerArgs": "-q -ex quit; wait() { fg >/dev/null; }; /bin/gdb -q --interpreter=mi",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
                 }
-            ]
+            ],
+            "preLaunchTask": "build",
         }
     ]
 }
